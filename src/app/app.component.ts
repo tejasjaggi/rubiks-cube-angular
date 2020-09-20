@@ -11,9 +11,10 @@ export class AppComponent {
   
   title = 'angular-Rubiks-Cube';
   colourEntered: boolean = true;
-  technique: any;
+  technique: any = "";
   missingColours: any = true;
   httpOptions: { "headers": HttpHeaders; };
+  stepsToSolve: any = '';
 
   
 
@@ -100,6 +101,7 @@ export class AppComponent {
  
   onChange(value){
     this.selectedColor = value;
+    $('colourDropdown').val(value);
   }
   onTechnique(value){
     this.technique = value;
@@ -140,7 +142,102 @@ export class AppComponent {
       technique: this.technique  
   }
     this.RubiksSolverService.solveCube(postBody, this.httpOptions).subscribe(data => {
-            console.log("DATA ", data)
+      var output = ''
+for(let move of data.result)
+{
+  if(move == "F'")
+  {
+    output+=" Front Inverse,"
+  }
+  else if (move == "F")
+  {
+    output+=" Front,"
+  }
+  else if (move == "F2")
+  {
+    output+=" Front, Front,"
+  }
+  else if (move == "R")
+  {
+    output+=" Right,"
+  }
+  else if (move == "R2")
+  {
+    output+=" Right, Right,"
+  }
+  else if (move == "R'")
+  {
+    output+=" Right Inverse,"
+  }
+  else if (move == "L")
+  {
+    output+=" Left,"
+  }
+  else if (move == "L2")
+  {
+    output+=" Left, Left,"
+  }
+  else if (move == "L'")
+  {
+    output+=" Left Inverse,"
+  }
+  else if (move == "U")
+  {
+    output+=" Up,"
+  }
+  else if (move == "U2")
+  {
+    output+=" Up, Up,"
+  }
+  else if (move == "U'")
+  {
+    output+=" Up Inverse,"
+  }
+  else if (move == "B")
+  {
+    output+=" Back,"
+  }
+  else if (move == "B2")
+  {
+    output+=" Back, Back,"
+  }
+  else if (move == "B'")
+  {
+    output+=" Back Inverse,"
+  }
+  else if (move == "D")
+  {
+    output+=" Down,"
+  }
+  else if (move == "D2")
+  {
+    output+=" Down, Down,"
+  }
+  else if (move == "D'")
+  {
+    output+=" Down Inverse,"
+  }
+  else if (move == "Y")
+  {
+    output+=" Rotate Y,"
+  }
+  else if (move == "Y'")
+  {
+    output+=" Inverse Y,"
+  }
+  else if (move == "Y2")
+  {
+    output+=" Rotate Y, Rotate Y,"
+  }
+  else
+  {
+    output+= move+','
+  }
+
+}
+output+= " CONGRATULATIONS!"
+
+      document.getElementById('textmain').innerHTML = output
   
     })
   
@@ -150,7 +247,7 @@ export class AppComponent {
   {
     if(!this.colourEntered)
     this.colourEntered = true;
-    
+    document.getElementById('textmain').innerHTML = ""
     for(let i=0; i<54; i++)
     {      
       if(i == 4 || i == 13 || i == 22 || i == 31 || i == 40 || i == 49)

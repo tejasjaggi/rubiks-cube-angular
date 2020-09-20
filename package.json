@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
     "@ngmodule/material-carousel": "^0.6.0",
-    "@types/jquery": "^2.0.47",
+    "@types/jquery": "^2.0.54",
     "igniteui-angular": "^7.2.23",
     "jquery": "^3.5.1",
     "jquery-carousel": "0.0.1",

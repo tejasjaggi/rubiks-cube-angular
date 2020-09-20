@@ -7,7 +7,7 @@
   </div> 
   <br> 
 <div>
-  <div style="margin-left: 20%">
+  <div style="margin-left: 15%">
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span (click)="setColour(0)"><textarea disabled style="resize: none;   background-color: lightgray; " id="0"   cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(1)"><textarea disabled style="resize: none;   background-color: lightgray; " id="1"   cols="3" rows="2"> </textarea></span> 
@@ -15,7 +15,7 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span (click)="setColour(3)"><textarea disabled style="resize: none;   background-color: lightgray; " id="3"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(4)"><textarea disabled style="resize: none;   background-color: white; " id="4"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('yellow')"><textarea disabled style="resize: none;   background-color: yellow; " id="4"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(5)"><textarea disabled style="resize: none;   background-color: lightgray; " id="5"    cols="3" rows="2"> </textarea></span> 
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,16 +40,16 @@
 <span (click)="setColour(38)"><textarea disabled style="resize: none;   background-color: lightgray; " id="38"    cols="3" rows="2"> </textarea></span>  
 <br>
 <span (click)="setColour(12)"><textarea disabled style="resize: none;   background-color: lightgray; " id="12"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(13)"><textarea disabled style="resize: none;   background-color: green; " id="13"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('blue')"><textarea disabled style="resize: none;   background-color: blue; " id="13"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(14)"><textarea disabled style="resize: none;   background-color: lightgray; " id="14"    cols="3" rows="2"> </textarea></span>   &nbsp;
 <span (click)="setColour(21)"><textarea disabled style="resize: none;   background-color: lightgray; " id="21"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(22)"><textarea disabled style="resize: none;   background-color: red; " id="22"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('red')"><textarea disabled style="resize: none;   background-color: red; " id="22"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(23)"><textarea disabled style="resize: none;   background-color: lightgray; " id="23"    cols="3" rows="2"> </textarea></span>   &nbsp; &nbsp;
 <span (click)="setColour(30)"><textarea disabled style="resize: none;   background-color: lightgray; " id="30"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(31)"><textarea disabled style="resize: none;   background-color: blue; " id="31"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('green')"><textarea disabled style="resize: none;   background-color: green; " id="31"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(32)"><textarea disabled style="resize: none;   background-color: lightgray; " id="32"    cols="3" rows="2"> </textarea></span>   &nbsp;
 <span (click)="setColour(39)"><textarea disabled style="resize: none;   background-color: lightgray; " id="39"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(40)"><textarea disabled style="resize: none;   background-color: orange; " id="40"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('orange')"><textarea disabled style="resize: none;   background-color: orange; " id="40"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(41)"><textarea disabled style="resize: none;   background-color: lightgray; " id="41"    cols="3" rows="2"> </textarea></span>  
 <br>
 <span (click)="setColour(15)"><textarea disabled style="resize: none;   background-color: lightgray; " id="15"    cols="3" rows="2"> </textarea></span> 
@@ -74,36 +74,45 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span (click)="setColour(48)"><textarea disabled style="resize: none;   background-color: lightgray; " id="48"    cols="3" rows="2"> </textarea></span> 
-<span (click)="setColour(49)"><textarea disabled style="resize: none;   background-color: yellow; " id="49"    cols="3" rows="2"> </textarea></span> 
+<span (click)="onChange('white')"><textarea disabled style="resize: none;   background-color: white; " id="49"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(50)"><textarea disabled style="resize: none;   background-color: lightgray; " id="50"    cols="3" rows="2"> </textarea></span> 
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span (click)="setColour(51)"><textarea disabled style="resize: none;   background-color: lightgray; " id="51"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(52)"><textarea disabled style="resize: none;   background-color: lightgray; " id="52"    cols="3" rows="2"> </textarea></span> 
 <span (click)="setColour(53)"><textarea disabled style="resize: none;   background-color: lightgray; " id="53"    cols="3" rows="2"> </textarea></span> 
-<div style="float: right; margin-right: 20%; margin-top: -20%">
-  <figure>
-      <img src="https://i.ibb.co/KrXXJdK/rubik-flat.png" style="height: 200px; width: 280px" alt="">
-      <figcaption>Enter the colours following this orientation</figcaption>
-  </figure>
-  
+<div>
+    <textarea  style="float: right; margin-right: 20%; margin-top: -30%; overflow: hidden; overflow-y: scroll; font-size: 15px" name="" id="textmain" cols="80" rows="25">
+    
+    </textarea>
   </div>
+
 </div>
 
 </div>
 <br>
-<div style="margin-left: 40%" >
-  <select (change)="onChange($event.target.value)" [ngStyle]="{'background-color':selectedColor}" class="customSelect" >
+
+<div style="margin-left: 50%; margin-top: 8%" >
+  <select (change)="onChange($event.target.value)" [ngStyle]="{'background-color':selectedColor}" class="customSelect" id="colourDropdown">
   <option disabled selected value style="color: white">Select a Colour </option>
   <option *ngFor="let color of colors" [value]="color.value"   [ngStyle]="{'background-color': color.value}">{{color.name}}</option>
 </select> 
-<select *ngIf = 'false' (change)="onTechnique($event.target.value)"  class="customSelect" style="margin-left: 5%; background-color: #FEC8D8">
+<select (change)="onTechnique($event.target.value)"  class="customSelect" style="margin-left: 5%; background-color: #FEC8D8">
     <option disabled selected value style="color: white">Select The Technique </option>
     <option *ngFor="let algorithm of algorithms" [value]="algorithm.value" >{{algorithm.name}}</option>
   </select> 
 <button [disabled] = 'colourEntered' class="button" (click)="resetColours()" style="margin-left: 5%; background-color: #d2e603; cursor: pointer;  padding: 5px"> Reset </button>
 <button [disabled] = 'missingColours' class="button" (click)="solveCube()" style="margin-left: 5%; background-color: #afe4ee; cursor: pointer;  padding: 5px"> Solve </button>
 </div>
+<br>
+<div style="margin-left: 20%; font-size: 20px; margin-top: -10%">
+    <figure>
+        <img src="https://i.ibb.co/VvPr7LJ/rubik-flat.png" style="height: 160px;" alt="">
+        <figcaption>Enter the colours following  &#010; this orientation</figcaption>
+    </figure> 
+    
+    </div>
+
 <div class="footer">
     <span class="copyright">Copyright © 2020 , Tejas Jaggi</span>
   </div>
