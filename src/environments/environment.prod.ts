@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: "https://git.heroku.com/flask-rubiks-cube.git/"
+  api: "https://flask-rubiks-cube.herokuapp.com/"
 };
